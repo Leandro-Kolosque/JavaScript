@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: snow;
+            font-size: 32px;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+            //Para não poluir o HTML -->document.getElementById('area').addEventListener('click', clicar)
+            //Para não poluir o HTML -->document.getElementById('area').addEventListener('mouseover', entrar)
+            //Para não poluir o HTML --> document.getElementById('area').addEventListener('mouseout', sair)
+        function clicar() {
+            // --> Comando longo : var a = window.document.getElementById('area')
+            // --> Comando Curto : var a = document.getElementById('area')
+
+            // --> com a varaiavel fora : a.innerText = 'Clicou!'
+            document.getElementById('area').innerText = 'Clicou!'
+            document.getElementById('area').style.backgroundColor = 'red'
+        }
+
+        function entrar() {
+            document.getElementById('area').innerText = "Entrou kk"
+        }
+
+        function sair() {
+            document.getElementById('area').innerText = "Saiu !"
+            document.getElementById('area').style.backgroundColor = 'green'
+        }
+    </script>
+</body>
+
+</html>
