@@ -1,4 +1,4 @@
-function parimpar(n){
+/*function parimpar(n){
     if (n % 2 == 0){
         return 'Par!'
     }else{
@@ -6,4 +6,4 @@ function parimpar(n){
     }
 }
 
-console.log(parimpar(4))
+console.log(parimpar(4))*/
